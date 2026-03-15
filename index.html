@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--
+  PORTFOLIO - ALI BENHAMZA
+  Développeur Front-end & Apprenti Cybersécurité
+  Casablanca, Maroc
+  
+  Ce portfolio a été créé avec HTML, CSS et JavaScript pur.
+  Thème: Dark Cybersecurity avec accents bleu électrique et vert matrice.
+-->
+<html lang="fr">
+<head>
+    <!-- Meta tags essentiels -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre et description pour SEO -->
+    <title>Ali Benhamza | Développeur & Cybersécurité</title>
+    <meta name="description" content="Portfolio d'Ali Benhamza, développeur passionné et apprenti en cybersécurité basé à Casablanca. Découvrez mes projets et compétences.">
+    
+    <!-- Google Fonts: Inter pour le texte, JetBrains Mono pour le code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de styles principale -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-lang="fr">
+    <!-- ============================================ -->
+    <!-- ANIMATION D'INTRODUCTION (2.5 secondes)     -->
+    <!-- Affiche [AB] avec effet d'ouverture          -->
+    <!-- ============================================ -->
+    <div id="intro-animation" class="intro-overlay">
+        <div class="intro-content">
+            <span class="bracket bracket-left">[</span>
+            <span class="initials">
+                <span class="letter">A</span>
+                <span class="letter">B</span>
+            </span>
+            <span class="bracket bracket-right">]</span>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- ARRIÈRE-PLAN ANIMÉ (Particules)             -->
+    <!-- Canvas pour l'effet de particules connectées -->
+    <!-- ============================================ -->
+    <canvas id="particles-canvas" class="particles-bg"></canvas>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION FIXE                              -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <!-- Logo avec crochets [AB] -->
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">[</span>AB<span class="logo-bracket">]</span>
+            </a>
+            
+            <div class="nav-right">
+                <!-- Menu de navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link" data-section="hero" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="#pricing" class="nav-link" data-section="pricing" data-i18n="nav.pricing">Offres</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <!-- Bouton langue -->
+                <button class="lang-toggle" id="lang-toggle" aria-label="Changer la langue" data-i18n-aria="nav.lang_toggle">
+                    <span class="lang-option" data-lang="fr">FR</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+
+                <!-- Bouton menu hamburger (mobile) -->
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu" data-i18n-aria="nav.menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- SECTION HERO (Page d'accueil)               -->
+    <!-- ============================================ -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <!-- Texte avec effet de typing -->
+            <div class="hero-greeting">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            
+            <!-- Titre principal -->
+            <h1 class="hero-title">
+                Ali <span class="highlight">Benhamza</span>
+            </h1>
+            
+            <!-- Sous-titre avec rotation des rôles -->
+            <p class="hero-subtitle">
+                <span class="role-prefix">&gt;</span> 
+                <span class="role-text" id="role-text">Développeur Front-end</span>
+                <span class="cursor-blink">_</span>
+            </p>
+            
+            <!-- Description -->
+            <p class="hero-description" data-i18n-html="hero.description">
+                13 ans • Casablanca, Maroc<br>
+                Passionné par le code et la cybersécurité
+            </p>
+            
+            <!-- Boutons d'appel à l'action -->
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span class="btn-icon">&lt;/&gt;</span>
+                    <span class="btn-text" data-i18n="hero.cta_projects">Voir mes projets</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span class="btn-icon">@</span>
+                    <span class="btn-text" data-i18n="hero.cta_contact">Me contacter</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Indicateur de scroll -->
+        <div class="hero-scroll">
+            <span class="scroll-text" data-i18n="hero.scroll">Défiler</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION À PROPOS                             -->
+    <!-- ============================================ -->
+    <section id="about" class="about">
+        <div class="container">
+            <!-- En-tête de section -->
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title" data-i18n="about.title">À propos</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <!-- Colonne de gauche: Code et histoire -->
+                <div class="about-text">
+                    <!-- Bloc de code style IDE -->
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-filename">about.json</span>
+                        </div>
+                        <pre class="code-content"><code data-i18n-html="about.code">{
+  <span class="code-key">"nom"</span>: <span class="code-string">"Ali Benhamza"</span>,
+  <span class="code-key">"age"</span>: <span class="code-number">13</span>,
+  <span class="code-key">"localisation"</span>: <span class="code-string">"Casablanca, Maroc"</span>,
+  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersécurité"</span>,
+  <span class="code-key">"experience"</span>: <span class="code-string">"Depuis l'âge de 12 ans"</span>
+}</code></pre>
+                    </div>
+                    
+                    <!-- Texte de présentation -->
+                    <div class="about-story">
+                        <h3 class="about-subtitle" data-i18n="about.subtitle">Mon parcours</h3>
+                        <p data-i18n="about.p1">
+                            Passionné de technologie depuis mon plus jeune âge, j'ai découvert le monde du développement 
+                            web à 12 ans. Ce qui a commencé comme une simple curiosité est rapidement devenu une véritable 
+                            passion.
+                        </p>
+                        <p data-i18n-html="about.p2">
+                            Aujourd'hui, je maîtrise <strong>HTML/CSS</strong> et j'ai des bases solides en <strong>Python</strong>. 
+                            Je me forme activement à la <strong>cybersécurité</strong>, un domaine qui me fascine par son 
+                            côté défensif et stratégique.
+                        </p>
+                        <p data-i18n="about.p3">
+                            Mon objectif : devenir un expert en sécurité informatique tout en continuant 
+                            à créer des expériences web modernes et performantes.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Colonne de droite: Statistiques -->
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label" data-i18n="about.stats_years">Années d'expérience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="7">0</span>
+                        <span class="stat-label" data-i18n="about.stats_projects">Projets réalisés</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label" data-i18n="about.stats_languages">Langages maîtrisés</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label" data-i18n="about.stats_passion">Passion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION COMPÉTENCES                          -->
+    <!-- ============================================ -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title" data-i18n="skills.title">Compétences</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Compétences Frontend -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">&lt;/&gt;</span>
+                        <span data-i18n="skills.web">Développement Web</span>
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="65">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_html">HTML</span>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="14">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_css">CSS3</span>
+                                <span class="skill-percent">14%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="0">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_js">JavaScript</span>
+                                <span class="skill-percent">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="0">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_responsive">Responsive Design</span>
+                                <span class="skill-percent">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Programmation -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">{}</span>
+                        <span data-i18n="skills.programming">Programmation</span>
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="20">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_python">Python</span>
+                                <span class="skill-percent">20%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="30">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_git">Git & GitHub</span>
+                                <span class="skill-percent">30%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="0">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_algorithms">Algorithmes</span>
+                                <span class="skill-percent">0%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cybersécurité -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">🔒</span>
+                        <span data-i18n="skills.security">Cybersécurité</span>
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="7">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_security_basics">Bases de la sécurité</span>
+                                <span class="skill-percent">7%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="38">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_linux">Linux Basics</span>
+                                <span class="skill-percent">38%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="10">
+                            <div class="skill-header">
+                                <span class="skill-name" data-i18n="skills.skill_networks">Réseaux</span>
+                                <span class="skill-percent">10%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Outils -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">⚡</span>
+                        <span data-i18n="skills.tools">Outils</span>
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <span class="tool-icon">VS</span>
+                            <span class="tool-name">VS Code</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-icon">G</span>
+                            <span class="tool-name">GitHub</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-icon">T</span>
+                            <span class="tool-name">Terminal</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-icon">C</span>
+                            <span class="tool-name">Chrome DevTools</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-icon">N</span>
+                            <span class="tool-name">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION PROJETS                              -->
+    <!-- ============================================ -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title" data-i18n="projects.title">Projets</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Projet 1: Portfolio -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="placeholder-icon">&lt;/&gt;</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <!-- Lien vers le site en ligne -->
+                                <a href="https://alibenhamzaportfolio.tiiny.site" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir le projet" data-i18n-aria="projects.view_project">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <!-- Lien GitHub - Bientôt disponible -->
+                                <a href="#" class="project-link js-soon" data-soon="github" aria-label="Code source" data-i18n-aria="projects.source_code">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.p1_title">Portfolio Personnel</h3>
+                        <p class="project-description" data-i18n="projects.p1_desc">
+                            Mon portfolio personnel avec animations modernes, design responsive et thème sombre.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Projet 2: Outil de Sécurité - Bientôt disponible -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="placeholder-icon">🔐</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-coming-soon" data-i18n="projects.coming">Bientôt disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.p2_title">Outil de Sécurité</h3>
+                        <p class="project-description" data-i18n="projects.p2_desc">
+                            Scripts Python pour l'analyse de sécurité et la détection de vulnérabilités basiques.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Sécurité</span>
+                            <span class="tag">Scripting</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Projet 3: Dashboard - Bientôt disponible -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="placeholder-icon">📊</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-coming-soon" data-i18n="projects.coming">Bientôt disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.p3_title">Dashboard Analytics</h3>
+                        <p class="project-description" data-i18n="projects.p3_desc">
+                            Tableau de bord interactif avec graphiques et visualisation de données en temps réel.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Projet 4: Mini Jeu - Bientôt disponible -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="placeholder-icon">🎮</span>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <span class="project-coming-soon" data-i18n="projects.coming">Bientôt disponible</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.p4_title">Mini Jeu Python</h3>
+                        <p class="project-description" data-i18n="projects.p4_desc">
+                            Jeu interactif en console développé en Python avec gestion de score et niveaux.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Logic</span>
+                            <span class="tag">Algorithmes</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="projects-more">
+                <p data-i18n="projects.more">Plus de projets à venir...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION OFFRES & TARIFS                      -->
+    <!-- ============================================ -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title" data-i18n="pricing.title">Offres & Tarifs</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <p class="section-intro" data-i18n-html="pricing.lead">
+                Des formules claires à partir de <strong>300 MAD</strong>. Hébergement non inclus.
+            </p>
+
+            <div class="pricing-grid">
+                <article class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-title" data-i18n="pricing.starter.name">Starter</h3>
+                        <p class="plan-tagline" data-i18n="pricing.starter.tagline">Site vitrine 1 page</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount" data-i18n="pricing.starter.price">300 MAD</span>
+                        <span class="price-note" data-i18n="pricing.per_project">par projet</span>
+                    </div>
+                    <p class="plan-note" data-i18n="pricing.no_hosting">Hébergement non inclus</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.starter.f1">1 page moderne</li>
+                        <li data-i18n="pricing.starter.f2">Design responsive</li>
+                        <li data-i18n="pricing.starter.f3">Section contact</li>
+                        <li data-i18n="pricing.starter.f4">Délai: 3 jours</li>
+                        <li data-i18n="pricing.starter.f5">1 révision</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary plan-cta">
+                        <span class="btn-icon">@</span>
+                        <span class="btn-text" data-i18n="pricing.cta">Demander un devis</span>
+                    </a>
+                </article>
+
+                <article class="plan-card featured">
+                    <span class="plan-badge" data-i18n="pricing.badge_popular">Populaire</span>
+                    <div class="plan-header">
+                        <h3 class="plan-title" data-i18n="pricing.pro.name">Pro</h3>
+                        <p class="plan-tagline" data-i18n="pricing.pro.tagline">Idéal pour PME</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount" data-i18n="pricing.pro.price">600 MAD</span>
+                        <span class="price-note" data-i18n="pricing.per_project">par projet</span>
+                    </div>
+                    <p class="plan-note" data-i18n="pricing.no_hosting">Hébergement non inclus</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.pro.f1">Jusqu'à 3 pages</li>
+                        <li data-i18n="pricing.pro.f2">UI/UX sur mesure</li>
+                        <li data-i18n="pricing.pro.f3">Optimisation performance</li>
+                        <li data-i18n="pricing.pro.f4">SEO de base</li>
+                        <li data-i18n="pricing.pro.f5">2 révisions</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary plan-cta">
+                        <span class="btn-icon">@</span>
+                        <span class="btn-text" data-i18n="pricing.cta">Demander un devis</span>
+                    </a>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-title" data-i18n="pricing.premium.name">Premium</h3>
+                        <p class="plan-tagline" data-i18n="pricing.premium.tagline">Présence complète</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount" data-i18n="pricing.premium.price">1200 MAD</span>
+                        <span class="price-note" data-i18n="pricing.per_project">par projet</span>
+                    </div>
+                    <p class="plan-note" data-i18n="pricing.no_hosting">Hébergement non inclus</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.premium.f1">Jusqu'à 6 pages</li>
+                        <li data-i18n="pricing.premium.f2">Animations avancées</li>
+                        <li data-i18n="pricing.premium.f3">Structure portfolio/blog</li>
+                        <li data-i18n="pricing.premium.f4">Mise en ligne assistée (sans hébergement)</li>
+                        <li data-i18n="pricing.premium.f5">3 révisions</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary plan-cta">
+                        <span class="btn-icon">@</span>
+                        <span class="btn-text" data-i18n="pricing.cta">Demander un devis</span>
+                    </a>
+                </article>
+            </div>
+
+            <p class="pricing-footnote" data-i18n="pricing.footnote">
+                Hébergement et nom de domaine non inclus. Possibles sur devis.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION CONTACT                              -->
+    <!-- Formulaire connecté à Google Apps Script    -->
+    <!-- ============================================ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h3 class="contact-subtitle" data-i18n="contact.subtitle">Travaillons ensemble</h3>
+                    <p class="contact-text" data-i18n-html="contact.text">
+                        Vous avez un projet en tête ou souhaitez discuter ?<br>
+                        N'hésitez pas à me contacter !
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div class="contact-detail">
+                                <span class="detail-label" data-i18n="contact.location_label">Localisation</span>
+                                <span class="detail-value" data-i18n="contact.location_value">Casablanca, Maroc</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div class="contact-detail">
+                                <span class="detail-label" data-i18n="contact.email_label">Email</span>
+                                <span class="detail-value">contact.alibenhamza.dev@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💻</span>
+                            <div class="contact-detail">
+                                <span class="detail-label" data-i18n="contact.availability_label">Disponibilité</span>
+                                <span class="detail-value" data-i18n="contact.availability_value">Projets & Collaborations</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Liens sociaux -->
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/Aliben_dev" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm5.25-.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@Aliben_dev" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M14 3v10.1a3.9 3.9 0 1 1-3.2-3.8v2.2a1.9 1.9 0 1 0 1.2 1.8V3h2zm4.5 0c.4 1.8 1.7 3.2 3.5 3.6v2.1c-1.6-.1-3.1-.6-4.5-1.5V3h1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-i18n="contact.form.name_label">Nom</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Votre nom" data-i18n-placeholder="contact.form.name_placeholder" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label" data-i18n="contact.form.email_label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" data-i18n-placeholder="contact.form.email_placeholder" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label" data-i18n="contact.form.subject_label">Sujet</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Sujet du message" data-i18n-placeholder="contact.form.subject_placeholder" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label" data-i18n="contact.form.message_label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Votre message..." data-i18n-placeholder="contact.form.message_placeholder" required></textarea>
+                    </div>
+                    <!-- Bouton d'envoi - Change de couleur quand le message est envoyé (#2F7832) -->
+                    <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                        <span class="btn-icon">📤</span>
+                        <span class="btn-text" data-i18n="contact.form.submit">Envoyer le message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">[AB]</span>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Développeur & Apprenti Cybersécurité</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero" data-i18n="nav.home">Accueil</a>
+                    <a href="#about" data-i18n="nav.about">À propos</a>
+                    <a href="#skills" data-i18n="nav.skills">Compétences</a>
+                    <a href="#projects" data-i18n="nav.projects">Projets</a>
+                    <a href="#pricing" data-i18n="nav.pricing">Offres</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-i18n-html="footer.copyright">
+                    &copy; 2026 Ali Benhamza. Tous droits réservés.
+                </p>
+                <p class="footer-built">
+                    <span class="built-with" data-i18n="footer.built_with">Créé par</span>
+                    <span class="heart">Ali</span>
+                    <span class="tech">HTML • CSS • JS</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- BOUTON RETOUR EN HAUT                        -->
+    <!-- ============================================ -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" data-i18n-aria="global.back_to_top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS JAVASCRIPT                           -->
+    <!-- ============================================ -->
+    <script src="script.js"></script>
+</body>
+</html>
