@@ -1086,6 +1086,90 @@ section {
 }
 
 /* ============================================
+   SECTION FAQ
+   ============================================ */
+.faq {
+    background: var(--color-bg-secondary);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.faq-item {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item[open] {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.faq-question {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::marker {
+    content: '';
+}
+
+.faq-question-text {
+    font-size: 1rem;
+}
+
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-bg-tertiary);
+    border-radius: 50%;
+    font-family: var(--font-mono);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.faq-question:hover .faq-icon {
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    background: rgba(88, 166, 255, 0.08);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-md);
+    color: var(--color-text-secondary);
+}
+
+.faq-answer p {
+    line-height: 1.7;
+}
+
+/* ============================================
    SECTION CONTACT
    ============================================ */
 .contact-content {
