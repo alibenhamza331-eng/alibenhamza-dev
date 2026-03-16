@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Feuille de styles principale -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body data-lang="fr">
     <!-- ============================================ -->
@@ -190,11 +190,11 @@
                 <!-- Colonne de droite: Statistiques -->
                 <div class="about-stats">
                     <div class="stat-card">
-                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-number" data-target="1">0</span>
                         <span class="stat-label" data-i18n="about.stats_years">Années d'expérience</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" data-target="7">0</span>
+                        <span class="stat-number" data-target="2">0</span>
                         <span class="stat-label" data-i18n="about.stats_projects">Projets réalisés</span>
                     </div>
                     <div class="stat-card">
@@ -391,21 +391,22 @@
                 <!-- Projet 1: Portfolio -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <iframe class="project-iframe" src="https://alibenhamza331-eng.github.io/alibenhamza-dev/" title="Portfolio Personnel" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                        <div class="project-placeholder project-placeholder-overlay">
                             <span class="placeholder-icon">&lt;/&gt;</span>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
                                 <!-- Lien vers le site en ligne -->
-                                <a href="https://alibenhamzaportfolio.tiiny.site" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir le projet" data-i18n-aria="projects.view_project">
+                                <a href="https://alibenhamza331-eng.github.io/alibenhamza-dev/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir le projet" data-i18n-aria="projects.view_project">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                         <polyline points="15 3 21 3 21 9"></polyline>
                                         <line x1="10" y1="14" x2="21" y2="3"></line>
                                     </svg>
                                 </a>
-                                <!-- Lien GitHub - Bientôt disponible -->
-                                <a href="#" class="project-link js-soon" data-soon="github" aria-label="Code source" data-i18n-aria="projects.source_code">
+                                <!-- Lien GitHub -->
+                                <a href="https://github.com/alibenhamza331-eng" class="project-link" aria-label="Code source" data-i18n-aria="projects.source_code" target="_blank" rel="noopener noreferrer">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                     </svg>
@@ -425,85 +426,43 @@
                         </div>
                     </div>
                 </article>
-                
-                <!-- Projet 2: Outil de Sécurité - Bientôt disponible -->
+
+                <!-- Projet 2: Calculatrice Python -->
                 <article class="project-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span class="placeholder-icon">🔐</span>
+                            <span class="placeholder-icon">PY</span>
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <span class="project-coming-soon" data-i18n="projects.coming">Bientôt disponible</span>
+                                <a href="assets/scripts/calculatrice.txt" class="project-link" data-script-link data-script-fr="assets/scripts/calculatrice.txt" data-script-en="assets/scripts/calculator.txt" data-i18n-aria="projects.view_script" aria-label="Voir le script" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="8" y1="13" x2="16" y2="13"></line>
+                                        <line x1="8" y1="17" x2="13" y2="17"></line>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/alibenhamza331-eng" class="project-link" aria-label="Code source" data-i18n-aria="projects.source_code" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" data-i18n="projects.p2_title">Outil de Sécurité</h3>
+                        <h3 class="project-title" data-i18n="projects.p2_title">Calculatrice Python</h3>
                         <p class="project-description" data-i18n="projects.p2_desc">
-                            Scripts Python pour l'analyse de sécurité et la détection de vulnérabilités basiques.
+                            Calculatrice en console avec opérations de base, validations d'entrée et gestion d'erreurs.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Sécurité</span>
-                            <span class="tag">Scripting</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Projet 3: Dashboard - Bientôt disponible -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="placeholder-icon">📊</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <span class="project-coming-soon" data-i18n="projects.coming">Bientôt disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-i18n="projects.p3_title">Dashboard Analytics</h3>
-                        <p class="project-description" data-i18n="projects.p3_desc">
-                            Tableau de bord interactif avec graphiques et visualisation de données en temps réel.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Projet 4: Mini Jeu - Bientôt disponible -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="placeholder-icon">🎮</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <span class="project-coming-soon" data-i18n="projects.coming">Bientôt disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-i18n="projects.p4_title">Mini Jeu Python</h3>
-                        <p class="project-description" data-i18n="projects.p4_desc">
-                            Jeu interactif en console développé en Python avec gestion de score et niveaux.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
+                            <span class="tag">CLI</span>
                             <span class="tag">Logic</span>
-                            <span class="tag">Algorithmes</span>
                         </div>
                     </div>
                 </article>
-            </div>
-            
-            <div class="projects-more">
-                <p data-i18n="projects.more">Plus de projets à venir...</p>
             </div>
         </div>
     </section>
@@ -612,10 +571,6 @@
                 <div class="section-line"></div>
             </div>
 
-            <p class="section-intro" data-i18n="faq.lead">
-                Quelques réponses rapides aux questions les plus fréquentes.
-            </p>
-
             <div class="faq-list">
                 <details class="faq-item" open>
                     <summary class="faq-question">
@@ -723,6 +678,11 @@
                         <a href="https://www.tiktok.com/@Aliben_dev" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M14 3v10.1a3.9 3.9 0 1 1-3.2-3.8v2.2a1.9 1.9 0 1 0 1.2 1.8V3h2zm4.5 0c.4 1.8 1.7 3.2 3.5 3.6v2.1c-1.6-.1-3.1-.6-4.5-1.5V3h1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/alibenhamza331-eng" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.86-.01-1.69-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.54 2.36 1.09 2.94.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.66-.33 2.51-.34.85.01 1.71.12 2.51.34 1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.69.92.69 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
                             </svg>
                         </a>
                     </div>

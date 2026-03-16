@@ -1,0 +1,28 @@
+while True:
+#nombre & op
+  n1 = float(input("choisiser un premier nombre:"))
+  n2 =float(input("choisiser un second nombre:"))
+  op = input("choisiser une operation: +, - , *, /")
+
+  if op == "+":
+    res = n1 + n2
+  elif op == "-":
+    res = n1 - n2
+  elif op == "*":
+    res = n1 * n2
+  elif op == "/":
+    if n2 != 0:
+      res = n1 / n2
+    else:
+      print("division par zero impossible")
+  else:
+    print("operation inconnue")
+  
+  print("le resultat est:",res)
+  recalculer = input("souhaitez vous refaire une operation?(y/n)")
+  if recalculer == "n":
+    print("operation terminée!")
+    break
+  else:
+    continue
+

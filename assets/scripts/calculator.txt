@@ -1,0 +1,27 @@
+while True:
+  # numbers & operation
+  n1 = float(input("choose a first number: "))
+  n2 = float(input("choose a second number: "))
+  op = input("choose an operation: +, -, *, / ")
+
+  if op == "+":
+    res = n1 + n2
+  elif op == "-":
+    res = n1 - n2
+  elif op == "*":
+    res = n1 * n2
+  elif op == "/":
+    if n2 != 0:
+      res = n1 / n2
+    else:
+      print("division by zero is not allowed")
+  else:
+    print("unknown operation")
+  
+  print("result:", res)
+  again = input("do you want another operation? (y/n) ")
+  if again == "n":
+    print("done!")
+    break
+  else:
+    continue

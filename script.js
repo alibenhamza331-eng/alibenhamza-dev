@@ -48,7 +48,7 @@ const translations = {
         'about.p1': "Passionné de technologie depuis mon plus jeune âge, j'ai découvert le monde du développement web à 12 ans. Ce qui a commencé comme une simple curiosité est rapidement devenu une véritable passion.",
         'about.p2': "Aujourd'hui, je maîtrise <strong>HTML/CSS</strong> et j'ai des bases solides en <strong>Python</strong>. Je me forme activement à la <strong>cybersécurité</strong>, un domaine qui me fascine par son côté défensif et stratégique.",
         'about.p3': "Mon objectif : devenir un expert en sécurité informatique tout en continuant à créer des expériences web modernes et performantes.",
-        'about.code': '{\n  <span class="code-key">"nom"</span>: <span class="code-string">"Ali Benhamza"</span>,\n  <span class="code-key">"age"</span>: <span class="code-number">13</span>,\n  <span class="code-key">"localisation"</span>: <span class="code-string">"Casablanca, Maroc"</span>,\n  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersécurité"</span>,\n  <span class="code-key">"experience"</span>: <span class="code-string">"Depuis l\'âge de 12 ans"</span>\n}',
+        'about.code': '{\n  <span class="code-key">"nom"</span>: <span class="code-string">"Ali Benhamza"</span>,\n  <span class="code-key">"age"</span>: <span class="code-number">13</span>,\n  <span class="code-key">"localisation"</span>: <span class="code-string">"Casablanca, Maroc"</span>,\n  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersécurité"</span>,\n  <span class="code-key">"experience"</span>: <span class="code-string">"1 an"</span>\n}',
         'about.stats_years': "Années d'expérience",
         'about.stats_projects': 'Projets réalisés',
         'about.stats_languages': 'Langages maîtrisés',
@@ -71,15 +71,10 @@ const translations = {
         'projects.title': 'Projets',
         'projects.p1_title': 'Portfolio Personnel',
         'projects.p1_desc': 'Mon portfolio personnel avec animations modernes, design responsive et thème sombre.',
-        'projects.p2_title': 'Outil de Sécurité',
-        'projects.p2_desc': "Scripts Python pour l'analyse de sécurité et la détection de vulnérabilités basiques.",
-        'projects.p3_title': 'Dashboard Analytics',
-        'projects.p3_desc': 'Tableau de bord interactif avec graphiques et visualisation de données en temps réel.',
-        'projects.p4_title': 'Mini Jeu Python',
-        'projects.p4_desc': 'Jeu interactif en console développé en Python avec gestion de score et niveaux.',
-        'projects.coming': 'Bientôt disponible',
-        'projects.more': 'Plus de projets à venir...',
+        'projects.p2_title': 'Calculatrice Python',
+        'projects.p2_desc': "Calculatrice en console avec opérations de base, validations d'entrée et gestion d'erreurs.",
         'projects.view_project': 'Voir le projet',
+        'projects.view_script': 'Voir le script',
         'projects.source_code': 'Code source',
         'pricing.title': 'Offres & Tarifs',
         'pricing.lead': 'Des formules claires à partir de <strong>300 MAD</strong>. Hébergement non inclus.',
@@ -113,15 +108,14 @@ const translations = {
         'pricing.premium.f5': '3 révisions',
         'pricing.footnote': 'Hébergement et nom de domaine non inclus. Possibles sur devis.',
         'faq.title': 'FAQ',
-        'faq.lead': 'Quelques réponses rapides aux questions les plus fréquentes.',
         'faq.q1': 'Quel est le délai de livraison ?',
-        'faq.a1': 'En général: 3 jours (Starter), 5-7 jours (Pro), 7-10 jours (Premium), selon le contenu fourni.',
+        'faq.a1': 'En général: 3 jours (Starter), 5-7 jours (Pro), 7-10 jours (Premium). Le délai dépend du contenu reçu.',
         'faq.q2': "Est-ce que tu gères l'hébergement et le domaine ?",
-        'faq.a2': "L'hébergement et le nom de domaine ne sont pas inclus, mais je peux aider à choisir et mettre en ligne.",
+        'faq.a2': "L'hébergement et le domaine ne sont pas inclus, mais je peux vous conseiller et aider à la mise en ligne.",
         'faq.q3': 'Combien de révisions sont incluses ?',
-        'faq.a3': 'Starter: 1 révision, Pro: 2 révisions, Premium: 3 révisions. Plus sur demande.',
+        'faq.a3': 'Starter: 1 révision, Pro: 2 révisions, Premium: 3 révisions. Des révisions supplémentaires sont possibles.',
         'faq.q4': 'De quoi as-tu besoin pour commencer ?',
-        'faq.a4': 'Un brief clair, vos textes, logo, couleurs souhaitées et quelques exemples de sites que vous aimez.',
+        'faq.a4': 'Un brief clair, vos textes, logo, couleurs souhaitées, et 2-3 exemples de sites que vous aimez.',
         'quote.subject_prefix': 'Demande de devis -',
         'quote.message': 'Bonjour,\nJe souhaite un devis pour l\'offre {plan} ({price}).\nType de site:\nNombre de pages:\nBudget:\nDélai souhaité:\nMerci.',
         'quote.default_plan': 'Offre',
@@ -184,7 +178,7 @@ const translations = {
         'about.p1': 'Passionate about technology from a young age, I discovered web development at 12. What started as simple curiosity quickly became a true passion.',
         'about.p2': 'Today, I master <strong>HTML/CSS</strong> and have solid foundations in <strong>Python</strong>. I actively train in <strong>cybersecurity</strong>, a field that fascinates me for its defensive and strategic side.',
         'about.p3': 'My goal: become an expert in information security while continuing to create modern, high-performance web experiences.',
-        'about.code': '{\n  <span class="code-key">"name"</span>: <span class="code-string">"Ali Benhamza"</span>,\n  <span class="code-key">"age"</span>: <span class="code-number">13</span>,\n  <span class="code-key">"location"</span>: <span class="code-string">"Casablanca, Morocco"</span>,\n  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersecurity"</span>,\n  <span class="code-key">"experience"</span>: <span class="code-string">"Since age 12"</span>\n}',
+        'about.code': '{\n  <span class="code-key">"name"</span>: <span class="code-string">"Ali Benhamza"</span>,\n  <span class="code-key">"age"</span>: <span class="code-number">13</span>,\n  <span class="code-key">"location"</span>: <span class="code-string">"Casablanca, Morocco"</span>,\n  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersecurity"</span>,\n  <span class="code-key">"experience"</span>: <span class="code-string">"1 year"</span>\n}',
         'about.stats_years': 'Years of experience',
         'about.stats_projects': 'Projects completed',
         'about.stats_languages': 'Languages mastered',
@@ -207,15 +201,10 @@ const translations = {
         'projects.title': 'Projects',
         'projects.p1_title': 'Personal Portfolio',
         'projects.p1_desc': 'My personal portfolio with modern animations, responsive design, and a dark theme.',
-        'projects.p2_title': 'Security Tool',
-        'projects.p2_desc': 'Python scripts for security analysis and basic vulnerability detection.',
-        'projects.p3_title': 'Analytics Dashboard',
-        'projects.p3_desc': 'Interactive dashboard with charts and real-time data visualization.',
-        'projects.p4_title': 'Python Mini Game',
-        'projects.p4_desc': 'Console-based interactive game in Python with score tracking and levels.',
-        'projects.coming': 'Coming soon',
-        'projects.more': 'More projects coming soon...',
+        'projects.p2_title': 'Python Calculator',
+        'projects.p2_desc': 'Console calculator with basic operations, input validation, and error handling.',
         'projects.view_project': 'View project',
+        'projects.view_script': 'View script',
         'projects.source_code': 'Source code',
         'pricing.title': 'Plans & Pricing',
         'pricing.lead': 'Clear packages starting at <strong>300 MAD</strong>. Hosting not included.',
@@ -249,15 +238,14 @@ const translations = {
         'pricing.premium.f5': '3 revisions',
         'pricing.footnote': 'Hosting and domain name not included. Available on request.',
         'faq.title': 'FAQ',
-        'faq.lead': 'Quick answers to the most common questions.',
         'faq.q1': 'What is the delivery time?',
-        'faq.a1': 'Usually: 3 days (Starter), 5-7 days (Pro), 7-10 days (Premium), depending on content.',
+        'faq.a1': 'Usually: 3 days (Starter), 5-7 days (Pro), 7-10 days (Premium). Timing depends on received content.',
         'faq.q2': 'Do you handle hosting and domain?',
-        'faq.a2': 'Hosting and domain are not included, but I can help choose and launch.',
+        'faq.a2': 'Hosting and domain are not included, but I can advise and help with the launch.',
         'faq.q3': 'How many revisions are included?',
-        'faq.a3': 'Starter: 1 revision, Pro: 2 revisions, Premium: 3 revisions. More on request.',
+        'faq.a3': 'Starter: 1 revision, Pro: 2 revisions, Premium: 3 revisions. Extra revisions are possible.',
         'faq.q4': 'What do you need to start?',
-        'faq.a4': 'A clear brief, your text, logo, desired colors, and a few example sites you like.',
+        'faq.a4': 'A clear brief, your text, logo, desired colors, and 2-3 example sites you like.',
         'quote.subject_prefix': 'Quote request -',
         'quote.message': 'Hello,\nI would like a quote for the {plan} plan ({price}).\nWebsite type:\nNumber of pages:\nBudget:\nDesired deadline:\nThank you.',
         'quote.default_plan': 'Plan',
@@ -408,6 +396,8 @@ function applyTranslations(lang) {
     if (roleEl && roles.length > 0) {
         roleEl.textContent = roles[0];
     }
+
+    updateScriptLinks();
 }
 
 function getTranslation(key) {
@@ -419,6 +409,20 @@ function getTranslation(key) {
 function getRoles() {
     const roles = getTranslation('hero.roles');
     return Array.isArray(roles) ? roles : [];
+}
+
+function updateScriptLinks() {
+    const links = document.querySelectorAll('[data-script-link]');
+    if (!links.length) return;
+
+    links.forEach(link => {
+        const fr = link.getAttribute('data-script-fr');
+        const en = link.getAttribute('data-script-en');
+        const next = currentLang === 'en' ? en : fr;
+        if (next) {
+            link.setAttribute('href', next);
+        }
+    });
 }
 
 function logConsoleMessage() {

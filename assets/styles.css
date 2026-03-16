@@ -845,6 +845,15 @@ section {
     overflow: hidden;
 }
 
+.project-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: var(--color-bg-primary);
+}
+
 .project-placeholder {
     width: 100%;
     height: 100%;
@@ -852,6 +861,13 @@ section {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-primary));
+}
+
+.project-placeholder-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(22, 27, 34, 0.5), rgba(13, 17, 23, 0.25));
 }
 
 .placeholder-icon {
