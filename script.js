@@ -48,7 +48,7 @@ const translations = {
         'about.p1': "Passionné de technologie depuis mon plus jeune âge, j'ai découvert le monde du développement web à 12 ans. Ce qui a commencé comme une simple curiosité est rapidement devenu une véritable passion.",
         'about.p2': "Aujourd'hui, je maîtrise <strong>HTML/CSS</strong> et j'ai des bases solides en <strong>Python</strong>. Je me forme activement à la <strong>cybersécurité</strong>, un domaine qui me fascine par son côté défensif et stratégique.",
         'about.p3': "Mon objectif : devenir un expert en sécurité informatique tout en continuant à créer des expériences web modernes et performantes.",
-        'about.code': '{\n  <span class="code-key">"nom"</span>: <span class="code-string">"Ali Benhamza"</span>,\n <span class="code-key">"localisation"</span>: <span class="code-string">"Casablanca, Maroc"</span>,\n  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersécurité"</span>,\n  <span class="code-key">"experience"</span>: <span class="code-string">"1 an"</span>\n}',
+        'about.code': '{\n  <span class="code-key">"nom"</span>: <span class="code-string">"Ali Benhamza"</span>,\n <span class="code-key"> "localisation"</span>: <span class="code-string">"Casablanca, Maroc"</span>,\n  <span class="code-key">"passion"</span>: <span class="code-string">"Code & Cybersécurité"</span>,\n  <span class="code-key">"experience"</span>: <span class="code-string">"1 an"</span>\n}',
         'about.stats_years': "Années d'expérience",
         'about.stats_projects': 'Projets réalisés',
         'about.stats_languages': 'Langages maîtrisés',
