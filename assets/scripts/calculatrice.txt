@@ -1,28 +1,56 @@
-while True:
-#nombre & op
-  n1 = float(input("choisiser un premier nombre:"))
-  n2 =float(input("choisiser un second nombre:"))
-  op = input("choisiser une operation: +, - , *, /")
+"""Calculatrice console avec validation des entrees (FR)."""
 
-  if op == "+":
-    res = n1 + n2
-  elif op == "-":
-    res = n1 - n2
-  elif op == "*":
-    res = n1 * n2
-  elif op == "/":
-    if n2 != 0:
-      res = n1 / n2
-    else:
-      print("division par zero impossible")
-  else:
-    print("operation inconnue")
-  
-  print("le resultat est:",res)
-  recalculer = input("souhaitez vous refaire une operation?(y/n)")
-  if recalculer == "n":
-    print("operation terminée!")
-    break
-  else:
-    continue
+OPS = {
+    "+": lambda a, b: a + b,
+    "-": lambda a, b: a - b,
+    "*": lambda a, b: a * b,
+    "/": lambda a, b: a / b,
+}
 
+
+def demander_nombre(prompt: str) -> float:
+    """Demande un nombre jusqu'a ce que l'utilisateur saisisse une valeur valide."""
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Entree invalide, merci de saisir un nombre.")
+
+
+def demander_operation() -> str | None:
+    """Retourne l'operation choisie ou None si l'utilisateur quitte."""
+    while True:
+        op = input("Choisissez une operation (+, -, *, /) ou q pour quitter: ").strip()
+        if op.lower() == "q":
+            return None
+        if op in OPS:
+            return op
+        print("Operation inconnue. Essayez encore.")
+
+
+def calculatrice():
+    print("=== Calculatrice console (FR) ===")
+    while True:
+        op = demander_operation()
+        if op is None:
+            print("Operation terminee !")
+            break
+
+        n1 = demander_nombre("Premier nombre: ")
+        n2 = demander_nombre("Second nombre: ")
+
+        if op == "/" and n2 == 0:
+            print("Division par zero impossible, on recommence.")
+            continue
+
+        resultat = OPS[op](n1, n2)
+        print(f"Resultat: {resultat:.2f}")
+
+        refaire = input("Nouvelle operation ? (o/n): ").strip().lower()
+        if refaire == "n":
+            print("A bientot !")
+            break
+
+
+if __name__ == "__main__":
+    calculatrice()

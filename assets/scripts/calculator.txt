@@ -1,27 +1,56 @@
-while True:
-  # numbers & operation
-  n1 = float(input("choose a first number: "))
-  n2 = float(input("choose a second number: "))
-  op = input("choose an operation: +, -, *, / ")
+"""CLI calculator with input validation (EN)."""
 
-  if op == "+":
-    res = n1 + n2
-  elif op == "-":
-    res = n1 - n2
-  elif op == "*":
-    res = n1 * n2
-  elif op == "/":
-    if n2 != 0:
-      res = n1 / n2
-    else:
-      print("division by zero is not allowed")
-  else:
-    print("unknown operation")
-  
-  print("result:", res)
-  again = input("do you want another operation? (y/n) ")
-  if again == "n":
-    print("done!")
-    break
-  else:
-    continue
+OPS = {
+    "+": lambda a, b: a + b,
+    "-": lambda a, b: a - b,
+    "*": lambda a, b: a * b,
+    "/": lambda a, b: a / b,
+}
+
+
+def ask_number(prompt: str) -> float:
+    """Ask for a number until the user provides a valid one."""
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input, please enter a number.")
+
+
+def ask_operation() -> str | None:
+    """Return the chosen operation or None when the user quits."""
+    while True:
+        op = input("Choose an operation (+, -, *, /) or q to quit: ").strip()
+        if op.lower() == "q":
+            return None
+        if op in OPS:
+            return op
+        print("Unknown operation. Try again.")
+
+
+def calculator():
+    print("=== Console Calculator (EN) ===")
+    while True:
+        op = ask_operation()
+        if op is None:
+            print("Done!")
+            break
+
+        n1 = ask_number("First number: ")
+        n2 = ask_number("Second number: ")
+
+        if op == "/" and n2 == 0:
+            print("Division by zero is not allowed. Let's restart.")
+            continue
+
+        result = OPS[op](n1, n2)
+        print(f"Result: {result:.2f}")
+
+        again = input("Another operation? (y/n): ").strip().lower()
+        if again == "n":
+            print("See you soon!")
+            break
+
+
+if __name__ == "__main__":
+    calculator()
