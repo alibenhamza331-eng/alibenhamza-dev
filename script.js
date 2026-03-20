@@ -32,6 +32,7 @@ const translations = {
         'nav.contact': 'Contact',
         'nav.menu': 'Menu',
         'nav.lang_toggle': 'Changer la langue',
+        'nav.theme_toggle': 'Changer le thème',
         'hero.greeting': 'Bonjour, je suis',
         'hero.roles': [
             'Développeur Front-end',
@@ -42,6 +43,8 @@ const translations = {
         'hero.description': 'Casablanca, Maroc<br>Passionné par le code et la cybersécurité',
         'hero.cta_projects': 'Voir mes projets',
         'hero.cta_contact': 'Me contacter',
+        'hero.palette_label': 'Palette UI premium',
+        'hero.palette_note': 'Dark + White theme, avec une direction visuelle plus professionnelle.',
         'hero.scroll': 'Défiler',
         'about.title': 'À propos',
         'about.subtitle': 'Mon parcours',
@@ -68,16 +71,20 @@ const translations = {
         'skills.skill_security_basics': 'Bases de la sécurité',
         'skills.skill_linux': 'Linux Basics',
         'skills.skill_networks': 'Réseaux',
+        'palette.title': 'Palette de couleur peinture',
+        'palette.description': 'Une palette pensée pour un rendu premium: contraste lisible, accents maîtrisés, et cohérence entre thème sombre et thème blanc.',
         'projects.title': 'Projets',
         'projects.p1_title': 'Portfolio Personnel',
-        'projects.p1_desc': 'Mon portfolio personnel avec animations modernes, design responsive et thème sombre.',
+        'projects.p1_desc': 'Mon portfolio personnel avec animations modernes, design responsive, thème sombre et thème blanc.',
         'projects.p2_title': 'Calculatrice Python',
         'projects.p2_desc': "Calculatrice en console avec opérations de base, validations d'entrée et gestion d'erreurs.",
+        'projects.preview_live': 'Aperçu interface live',
+        'projects.preview_script': 'Script Python CLI',
         'projects.view_project': 'Voir le projet',
         'projects.view_script': 'Voir le script',
         'projects.source_code': 'Code source',
         'pricing.title': 'Offres & Tarifs',
-        'pricing.lead': 'Offres claires à partir de <strong>2000 MAD</strong>. Hébergement GitHub Pages inclus et promo lancement pour les 3 premiers clients.',
+        'pricing.lead': 'Offres claires à partir de <strong>2000+ MAD</strong>. Hébergement inclus, design sur mesure et accompagnement de qualité.',
         'pricing.per_project': 'par projet',
         'pricing.no_hosting': 'Hébergement GitHub Pages inclus (sous-domaine github.io).',
         'pricing.cta': 'Demander un devis',
@@ -106,10 +113,10 @@ const translations = {
         'pricing.premium.f3': 'Plan de contenu + optimisation vitesse',
         'pricing.premium.f4': 'SEO prêt production + balises Open Graph',
         'pricing.premium.f5': 'Support 45 jours, mises à jour sur demande',
-        'pricing.footnote': 'Promo lancement : -15% pour les 3 premiers clients. Pages supplémentaires dès 180 MAD/page. URL en sous-domaine github.io (nom du dépôt).',
+        'pricing.footnote': 'Tarifs indicatifs selon la complexité du projet. Le prix final est confirmé après brief (contenu, nombre de pages, fonctionnalités et délais).',
         'faq.title': 'FAQ',
         'faq.q1': 'Quel est le délai de livraison ?',
-        'faq.a1': 'En général: 3 jours (Starter), 5-7 jours (Pro), 7-10 jours (Premium). Le délai dépend du contenu reçu.',
+        'faq.a1': 'En général: 3 jours (Starter), 1-2 semaines (Pro), 2-3 semaines (Premium). Le délai dépend du contenu reçu.',
         'faq.q2': "Est-ce que tu gères l'hébergement ?",
         'faq.a2': "Hébergement GitHub Pages inclus (sous-domaine github.io).",
         'faq.q3': 'Quel support est inclus après la livraison ?',
@@ -162,6 +169,7 @@ const translations = {
         'nav.contact': 'Contact',
         'nav.menu': 'Menu',
         'nav.lang_toggle': 'Switch language',
+        'nav.theme_toggle': 'Switch theme',
         'hero.greeting': "Hi, I'm",
         'hero.roles': [
             'Front-end Developer',
@@ -172,6 +180,8 @@ const translations = {
         'hero.description': 'Casablanca, Morocco<br>Passionate about code and cybersecurity',
         'hero.cta_projects': 'See my projects',
         'hero.cta_contact': 'Contact me',
+        'hero.palette_label': 'Premium UI palette',
+        'hero.palette_note': 'Dark + white theme with a more professional visual direction.',
         'hero.scroll': 'Scroll',
         'about.title': 'About',
         'about.subtitle': 'My journey',
@@ -198,16 +208,20 @@ const translations = {
         'skills.skill_security_basics': 'Security Fundamentals',
         'skills.skill_linux': 'Linux Basics',
         'skills.skill_networks': 'Networking',
+        'palette.title': 'Paint color palette',
+        'palette.description': 'A palette built for a premium result: readable contrast, controlled accents, and consistency between dark and white themes.',
         'projects.title': 'Projects',
         'projects.p1_title': 'Personal Portfolio',
-        'projects.p1_desc': 'My personal portfolio with modern animations, responsive design, and a dark theme.',
+        'projects.p1_desc': 'My personal portfolio with modern animations, responsive design, dark theme, and white theme.',
         'projects.p2_title': 'Python Calculator',
         'projects.p2_desc': 'Console calculator with basic operations, input validation, and error handling.',
+        'projects.preview_live': 'Live UI preview',
+        'projects.preview_script': 'Python CLI script',
         'projects.view_project': 'View project',
         'projects.view_script': 'View script',
         'projects.source_code': 'Source code',
         'pricing.title': 'Plans & Pricing',
-        'pricing.lead': 'Clear packages from <strong>2000 MAD</strong>. GitHub Pages hosting included and a launch promo for the first 3 clients.',
+        'pricing.lead': 'Clear packages from <strong>2000+ MAD</strong>. Hosting included, custom design, and quality support.',
         'pricing.per_project': 'per project',
         'pricing.no_hosting': 'GitHub Pages hosting included (github.io subdomain).',
         'pricing.cta': 'Request a quote',
@@ -236,10 +250,10 @@ const translations = {
         'pricing.premium.f3': 'Content plan + speed optimisation',
         'pricing.premium.f4': 'Production-ready SEO + Open Graph tags',
         'pricing.premium.f5': '45 days of support, updates on request',
-        'pricing.footnote': 'Launch promo: -15% for the first 3 clients. Extra pages from 180 MAD/page. URL on github.io (repo name).',
+        'pricing.footnote': 'Prices are indicative and depend on project complexity. Final pricing is confirmed after your brief (content, pages, features, and timeline).',
         'faq.title': 'FAQ',
         'faq.q1': 'What is the delivery time?',
-        'faq.a1': 'Usually: 3 days (Starter), 5-7 days (Pro), 7-10 days (Premium). Timing depends on received content.',
+        'faq.a1': 'Usually: 3 days (Starter), 1-2 weeks (Pro), 2-3 weeks (Premium). Timing depends on received content.',
         'faq.q2': 'Do you handle hosting?',
         'faq.a2': 'GitHub Pages hosting is included (github.io subdomain).',
         'faq.q3': 'What post-launch support is included?',
@@ -283,6 +297,7 @@ const translations = {
 };
 
 let currentLang = 'fr';
+let currentTheme = 'dark';
 let typingElement = null;
 let typingTimeoutId = null;
 let typingIntervalId = null;
@@ -294,6 +309,7 @@ let roleTimeoutId = null;
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
+    initTheme();
     initParticles();
     initNavigation();
     initTypingEffect();
@@ -305,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initSmoothScroll();
     initPricingCtas();
-    initComingSoonAlerts();
+    initCardTilt();
 });
 
 // ============================================
@@ -325,6 +341,44 @@ function initLanguage() {
     }
 
     logConsoleMessage();
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    currentTheme = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme
+        : (prefersLight ? 'light' : 'dark');
+
+    applyTheme(currentTheme, false);
+
+    const toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(nextTheme);
+        });
+    }
+}
+
+function applyTheme(theme, persist = true) {
+    currentTheme = theme === 'light' ? 'light' : 'dark';
+    document.body.dataset.theme = currentTheme;
+    updateThemeMeta();
+
+    if (persist) {
+        localStorage.setItem('theme', currentTheme);
+    }
+
+    document.dispatchEvent(new CustomEvent('themechange', {
+        detail: { theme: currentTheme }
+    }));
+}
+
+function updateThemeMeta() {
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (!themeColor) return;
+    themeColor.setAttribute('content', currentTheme === 'light' ? '#f5f8fc' : '#0d1117');
 }
 
 function setLanguage(lang, options = {}) {
@@ -448,8 +502,30 @@ function initParticles() {
         particleCount: window.innerWidth < 768 ? 25 : 50, // Moins de particules sur mobile
         connectionDistance: 150, // Distance max pour connecter 2 particules
         speed: 0.5, // Vitesse de déplacement
-        color: 'rgba(88, 166, 255, 0.5)' // Bleu électrique avec transparence
+        rgb: '88, 166, 255',
+        particleOpacityMin: 0.2,
+        particleOpacityRange: 0.5,
+        lineOpacity: 0.3
     };
+
+    function syncParticlesTheme(theme) {
+        if (theme === 'light') {
+            config.rgb = '29, 79, 216';
+            config.particleOpacityMin = 0.1;
+            config.particleOpacityRange = 0.35;
+            config.lineOpacity = 0.2;
+        } else {
+            config.rgb = '88, 166, 255';
+            config.particleOpacityMin = 0.2;
+            config.particleOpacityRange = 0.5;
+            config.lineOpacity = 0.3;
+        }
+    }
+
+    syncParticlesTheme(currentTheme);
+    document.addEventListener('themechange', (event) => {
+        syncParticlesTheme(event.detail?.theme);
+    });
     
     // Redimensionnement du canvas à la taille de la fenêtre
     function resizeCanvas() {
@@ -472,7 +548,7 @@ function initParticles() {
             this.vx = (Math.random() - 0.5) * config.speed; // Vitesse X aléatoire
             this.vy = (Math.random() - 0.5) * config.speed; // Vitesse Y aléatoire
             this.radius = Math.random() * 2 + 1; // Taille aléatoire
-            this.opacity = Math.random() * 0.5 + 0.2; // Transparence aléatoire
+            this.opacity = Math.random() * config.particleOpacityRange + config.particleOpacityMin;
         }
         
         update() {
@@ -487,7 +563,7 @@ function initParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = config.color.replace('0.5', this.opacity.toString());
+            ctx.fillStyle = `rgba(${config.rgb}, ${this.opacity})`;
             ctx.fill();
         }
     }
@@ -510,11 +586,11 @@ function initParticles() {
                 
                 // Si les particules sont assez proches, les connecter
                 if (distance < config.connectionDistance) {
-                    const opacity = (1 - distance / config.connectionDistance) * 0.3;
+                    const opacity = (1 - distance / config.connectionDistance) * config.lineOpacity;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(88, 166, 255, ${opacity})`;
+                    ctx.strokeStyle = `rgba(${config.rgb}, ${opacity})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
@@ -577,20 +653,39 @@ function initNavigation() {
     
     // Menu mobile: ouvrir/fermer au clic sur le hamburger
     if (navToggle && navMenu) {
+        const closeMenu = () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
+        };
+
+        navToggle.setAttribute('aria-expanded', 'false');
+
         navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            const isOpen = navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.classList.toggle('menu-open', isOpen);
         });
         
         // Fermer le menu au clic sur un lien
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
+
+        document.addEventListener('click', (event) => {
+            const target = event.target;
+            if (!(target instanceof Element)) return;
+            if (target.closest('#nav-toggle') || target.closest('#nav-menu')) return;
+            closeMenu();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        }, { passive: true });
     }
     
     // Mise en évidence du lien actif selon la section visible
@@ -765,7 +860,7 @@ function initStatCounters() {
 function initScrollAnimations() {
     // Ajouter la classe fade-in aux éléments à animer
     const animateElements = document.querySelectorAll(
-        '.skill-category, .project-card, .stat-card, .about-story, .code-block, .plan-card, .pricing-footnote, .section-intro'
+        '.skill-category, .project-card, .stat-card, .about-story, .code-block, .plan-card, .pricing-footnote, .section-intro, .paint-palette-card, .hero-palette'
     );
     
     animateElements.forEach(el => {
@@ -827,8 +922,8 @@ function initContactForm() {
         
         const submitBtn = form.querySelector('button[type="submit"]');
         const btnText = submitBtn.querySelector('.btn-text');
-        const btnIcon = submitBtn.querySelector('.btn-icon');
-        const originalIcon = btnIcon ? btnIcon.textContent : '';
+        const btnIconUse = submitBtn.querySelector('.btn-icon-use');
+        const originalIcon = btnIconUse ? btnIconUse.getAttribute('href') : '';
         
         // Récupération des données du formulaire
         const formData = new FormData(form);
@@ -841,8 +936,9 @@ function initContactForm() {
         };
         
         // État: Envoi en cours
-        if (btnIcon) btnIcon.textContent = '⏳';
+        if (btnIconUse) btnIconUse.setAttribute('href', 'assets/svg/sprite.svg#icon-loader');
         if (btnText) btnText.textContent = getTranslation('contact.form.sending');
+        submitBtn.classList.add('is-loading');
         submitBtn.disabled = true;
         
         try {
@@ -856,22 +952,25 @@ function initContactForm() {
             });
             
             // État: Succès - bouton vert (#2F7832)
-            if (btnIcon) btnIcon.textContent = '✓';
+            if (btnIconUse) btnIconUse.setAttribute('href', 'assets/svg/sprite.svg#icon-check');
             if (btnText) btnText.textContent = getTranslation('contact.form.success');
-            submitBtn.style.background = '#2F7832';
-            submitBtn.style.borderColor = '#2F7832';
+            submitBtn.classList.remove('is-loading');
+            submitBtn.style.background = 'var(--form-success)';
+            submitBtn.style.borderColor = 'var(--form-success)';
             form.reset();
         } catch (error) {
             console.error('Erreur:', error);
-            if (btnIcon) btnIcon.textContent = '✗';
+            if (btnIconUse) btnIconUse.setAttribute('href', 'assets/svg/sprite.svg#icon-close');
             if (btnText) btnText.textContent = getTranslation('contact.form.error');
-            submitBtn.style.background = '#ff5f56';
+            submitBtn.classList.remove('is-loading');
+            submitBtn.style.background = 'var(--form-error)';
         }
         
         // Réinitialiser le bouton après 3 secondes
         setTimeout(() => {
-            if (btnIcon) btnIcon.textContent = originalIcon;
+            if (btnIconUse && originalIcon) btnIconUse.setAttribute('href', originalIcon);
             if (btnText) btnText.textContent = getTranslation('contact.form.submit');
+            submitBtn.classList.remove('is-loading');
             submitBtn.style.background = '';
             submitBtn.style.borderColor = '';
             submitBtn.disabled = false;
@@ -935,19 +1034,47 @@ function buildQuoteMessage(planName, price) {
 }
 
 // ============================================
-// ALERTES "BIENTÔT DISPONIBLE"
+// ANIMATIONS 3D LÉGÈRES
 // ============================================
-function initComingSoonAlerts() {
-    const soonLinks = document.querySelectorAll('.js-soon');
-    if (soonLinks.length === 0) return;
+function initCardTilt() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const finePointer = window.matchMedia('(pointer: fine)').matches;
+    if (reducedMotion || !finePointer) return;
 
-    soonLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const type = link.dataset.soon || 'github';
-            const messageKey = `alerts.${type}`;
-            alert(getTranslation(messageKey));
+    const cards = document.querySelectorAll('.skill-category, .project-card, .plan-card, .stat-card, .paint-palette-card');
+    if (cards.length === 0) return;
+
+    cards.forEach(card => {
+        card.classList.add('tilt-card');
+
+        const resetTilt = () => {
+            card.classList.remove('is-tilting');
+            card.style.setProperty('--tilt-x', '0deg');
+            card.style.setProperty('--tilt-y', '0deg');
+            card.style.setProperty('--glare-x', '50%');
+            card.style.setProperty('--glare-y', '0%');
+        };
+
+        card.addEventListener('pointermove', (event) => {
+            if (event.pointerType && event.pointerType !== 'mouse') return;
+
+            const rect = card.getBoundingClientRect();
+            const x = (event.clientX - rect.left) / rect.width;
+            const y = (event.clientY - rect.top) / rect.height;
+            const maxTilt = 6;
+
+            const tiltY = (x - 0.5) * maxTilt * 2;
+            const tiltX = (0.5 - y) * maxTilt * 2;
+
+            card.classList.add('is-tilting');
+            card.style.setProperty('--tilt-x', `${tiltX.toFixed(2)}deg`);
+            card.style.setProperty('--tilt-y', `${tiltY.toFixed(2)}deg`);
+            card.style.setProperty('--glare-x', `${(x * 100).toFixed(1)}%`);
+            card.style.setProperty('--glare-y', `${(y * 100).toFixed(1)}%`);
         });
+
+        card.addEventListener('pointerleave', resetTilt);
+        card.addEventListener('pointercancel', resetTilt);
     });
 }
 
@@ -976,7 +1103,11 @@ function debounce(func, wait) {
 // ============================================
 // EFFETS DE CURSEUR PERSONNALISÉ (Desktop uniquement)
 // ============================================
-if (window.matchMedia('(pointer: fine)').matches) {
+if (
+    window.matchMedia('(pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+    window.innerWidth >= 1100
+) {
     const cursor = document.createElement('div');
     cursor.className = 'custom-cursor';
     cursor.style.cssText = `
